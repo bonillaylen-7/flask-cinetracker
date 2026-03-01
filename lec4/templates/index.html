@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - CineTracker{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h2>{{ data.title }}</h2>
+    <p>{{ data.message }}</p>
+    <div class="cards">
+        <div class="card">
+            <h3>🎥 Películas</h3>
+            <p>Registra y gestiona tus películas favoritas.</p>
+            <a href="/peliculas">Ver películas</a>
+        </div>
+        <div class="card">
+            <h3>👤 Usuarios</h3>
+            <p>Administra los usuarios de la plataforma.</p>
+            <a href="/usuarios">Ver usuarios</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
