@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Películas - CineTracker{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>🎥 Lista de Películas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Género</th>
+                <th>Año</th>
+                <th>Estado</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pelicula in peliculas %}
+            <tr>
+                <td>{{ pelicula.id }}</td>
+                <td>{{ pelicula.titulo }}</td>
+                <td>{{ pelicula.genero }}</td>
+                <td>{{ pelicula.año }}</td>
+                <td>{{ pelicula.estado }}</td>
+                <td>{{ pelicula.calificacion }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
